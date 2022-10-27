@@ -87,14 +87,14 @@ To Update An Item In A Table:
 
 -----------------------------------------------------------------------------------
 
-`$pop (Removes the first or last element in an array)
+`$pop (Removes the first or last element in an array)`
 
 example: 
 
-db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})
+`db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})`
 
 1 = last item in array
--1 = first item in array`
+-1 = first item in array
 
 -----------------------------------------------------------------------------------
 
