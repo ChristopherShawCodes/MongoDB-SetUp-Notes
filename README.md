@@ -1,63 +1,85 @@
 # MongoDB-SetUp-Notes
 
 Mongo DB is used in the command prompt 
-
+---------------------------------------
 Start Server:
 
 `Mongosh`
 
+---------------------------------------
 
 Create Database:
 
 `use new_db`
 
+---------------------------------------
+
 Delete Database:
 
 `db.dropDatabase()`
 
+---------------------------------------
 
 Create Table / Collection:
 
 `db.createCollection('collectionName')`
 
+---------------------------------------
+
 Drop Table / Collection:
 
 `db.collectionName.drop()`
+
+---------------------------------------
 
 To See Contents Of A Collection:
 
 `db.collectionName.find()`
 
-
+---------------------------------------
 
 To Insert An Item In A Table:
 
 `db.users.insert({name: 'Chris', location: 'TN'})`
 
+---------------------------------------
 
 To Delete An Item In A Table:
 
 `db.users.deleteOne({name: 'Chris'})`
 
+---------------------------------------
 
 To Update An Item In A Table:
 
 `db.users.update({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
 
+---------------------------------------
 
 Frequently Used Operators:
 
 `$gt (Greater Than, Used to query number fields)`
+-----------------------------------------------------------------------------------
 
 `$gte (Greater Than Or Equal To , Used to query number fields)`
 
+-----------------------------------------------------------------------------------
+
 `$lt (LessThan  , Used to query number fields)`
+
+-----------------------------------------------------------------------------------
 
 `$lte (LessThan Or Equal To  , Used to query number fields)`
 
+-----------------------------------------------------------------------------------
+
 `$in (In Array , Used to find documents who have a particular value within an array)`
 
+-----------------------------------------------------------------------------------
+
 `$push (Push to an array contained within a document)`
+
+-----------------------------------------------------------------------------------
 
 `$pop (Removes the first or last element in an array)
 
@@ -68,7 +90,11 @@ db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})
 1 = last item in array
 -1 = first item in array`
 
+-----------------------------------------------------------------------------------
+
 `$addToSet (like $push but only adds to the specified array if the value doesn't already exist, no duplicate entries)`
+
+-----------------------------------------------------------------------------------
 
 `$pull (Removes a specified value from an array , unlike $pop because POP removes by the location in the array)`
 
@@ -79,7 +105,7 @@ example:
 This will remove ALL instances of VALUE from the documents with the array specified by the array_key that matches QUERY`
 
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Example Quiz:
 
