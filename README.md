@@ -3,7 +3,8 @@
 Mongo DB is used in the command prompt 
 
 Start Server:
-Mongosh
+
+`Mongosh`
 
 
 Create Database:
@@ -69,7 +70,7 @@ db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})
 
 `$addToSet (like $push but only adds to the specified array if the value doesn't already exist, no duplicate entries)`
 
-`$pull (Removes a specified value from an array , unlike $pop because POP removes by the location in the array)
+`$pull (Removes a specified value from an array , unlike $pop because POP removes by the location in the array)`
 
 example: 
 
