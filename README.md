@@ -45,20 +45,27 @@ To Update An Item In A Table:
 
 
 Frequently Used Operators:
+
 `$gt (Greater Than, Used to query number fields)`
+
 `$gte (Greater Than Or Equal To , Used to query number fields)`
+
 `$lt (LessThan  , Used to query number fields)`
+
 `$lte (LessThan Or Equal To  , Used to query number fields)`
+
 `$in (In Array , Used to find documents who have a particular value within an array)`
+
 `$push (Push to an array contained within a document)`
 
 `$pop (Removes the first or last element in an array)
+
 example: 
 
 db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})
 
 1 = last item in array
--1 = first item in array `
+-1 = first item in array`
 
 `$addToSet (like $push but only adds to the specified array if the value doesn't already exist, no duplicate entries)`
 
@@ -66,7 +73,7 @@ db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})
 
 example: 
 
-db.COLLECTION.update({QUERY}, {$pull: {array_kay: VALUE}})
+`db.COLLECTION.update({QUERY}, {$pull: {array_kay: VALUE}})`
 
 This will remove ALL instances of VALUE from the documents with the array specified by the array_key that matches QUERY`
 
