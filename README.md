@@ -56,7 +56,7 @@ To Update An Item In A Table:
 
 ---------------------------------------
 
-Frequently Used Operators:
+*****Frequently Used Operators*****
 
 `$gt (Greater Than, Used to query number fields)`
 -----------------------------------------------------------------------------------
@@ -77,6 +77,12 @@ Frequently Used Operators:
 
 -----------------------------------------------------------------------------------
 
+
+`$addToSet (like $push but only adds to the specified array if the value doesn't already exist, no duplicate entries)`
+
+-----------------------------------------------------------------------------------
+
+
 `$push (Push to an array contained within a document)`
 
 -----------------------------------------------------------------------------------
@@ -89,10 +95,6 @@ db.COLLECTION.update({QUERY}, {$pop:{array_key:(1 or -1)}})
 
 1 = last item in array
 -1 = first item in array`
-
------------------------------------------------------------------------------------
-
-`$addToSet (like $push but only adds to the specified array if the value doesn't already exist, no duplicate entries)`
 
 -----------------------------------------------------------------------------------
 
