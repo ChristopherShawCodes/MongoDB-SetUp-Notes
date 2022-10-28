@@ -1,7 +1,7 @@
 # MongoDB-SetUp-Notes
 
 Mongo DB is used in the command prompt 
----------------------------------------
+----------------Start Server:-----------------------
 Start Server:
 
 `Mongosh`
@@ -58,6 +58,7 @@ To Insert An Item In A Table:
 Add a new field called 'number_of_belts' to ALL students with a starting value of 0
 
 `db.students.updateMany({},{$set:{number_of_belts:0}})`
+`db.students.updateMany({},{$set:{updated_on:'Oct28th,2022'}})`
 
 ---------------------------------------
 
@@ -118,6 +119,7 @@ Add another interest into the existing interests array
 `db.students.updateOne({name:'Britt'},{$push:{interests: "Gardening"}})`
 
 Update the number_of_belts for ALL students to add 1
+inc=increment
 
 `db.students.updateMany({},{$inc:{number_of_belts:1}})`
 
