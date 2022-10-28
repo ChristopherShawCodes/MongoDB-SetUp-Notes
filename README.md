@@ -1,7 +1,7 @@
 # MongoDB-SetUp-Notes
 
 Mongo DB is used in the command prompt 
-----------------Start Server:-----------------------
+---------------------------------------
 Start Server:
 
 `Mongosh`
@@ -99,14 +99,21 @@ Delete a field from a table
 `db.students.updateMany({},{$unset:{lucky_number:1}},{multi:true})`
 
 ---------------------------------------
-
-
-
-To Update An Item In A Table:
+---------------------------------------
+---------------------------------------
 
 updateOne = Update very first thing or the specified item
+updateMany = Update everything that matches the query
+
+---------------------------------------
+To Update An Item In A Table:
+
+
+---------------------------------------
 
 `db.users.updateOne({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
+
+---------------------------------------
 
 updateMany = Update everything that matches the query
 
