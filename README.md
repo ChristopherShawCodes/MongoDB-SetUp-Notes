@@ -75,7 +75,7 @@ To Update An Item In A Table:
 
 Sort by number between 1 and 9 
 
-'db.tableName.find({lucky_number: {$gte:1,$lte:9}})`
+`db.tableName.find({lucky_number: {$gte:1,$lte:9}})`
 
 -----------------------------------------------------------------------------------
 
