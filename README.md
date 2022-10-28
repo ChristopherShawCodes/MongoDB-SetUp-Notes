@@ -40,7 +40,7 @@ To See Contents Of A Collection:
 
 To Insert An Item In A Table:
 
-`db.users.insert({name: 'Chris', location: 'TN'})`
+`db.users.insertOne({name: 'Chris', location: 'TN'})`
 
 ---------------------------------------
 
