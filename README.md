@@ -1,6 +1,13 @@
-# MongoDB-SetUp-Notes
+# MongoDB-KeyNotes
 
+Youtube link for help: https://www.youtube.com/watch?v=ofme2o29ngU
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
 Mongo DB is used in the command prompt 
+---------------------------------------
+
 ---------------------------------------
 Start Server:
 
@@ -103,12 +110,11 @@ Delete a field from a table
 ---------------------------------------
 
 updateOne = Update very first thing or the specified item
+
 updateMany = Update everything that matches the query
 
 ---------------------------------------
 To Update An Item In A Table:
-
-
 ---------------------------------------
 
 `db.users.updateOne({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
@@ -120,11 +126,12 @@ updateMany = Update everything that matches the query
 example: Add interests: "coding", "brunch", "MongoDB" to all students
 
 `db.students.updateMany({},{$push:{interests:["coding","brunch","MongoDB"]}})`
+---------------------------------------
 
-Add another interest into the existing interests array
+Add another item into the existing items array
 
 `db.students.updateOne({name:'Britt'},{$push:{interests: "Gardening"}})`
-
+---------------------------------------
 Update the number_of_belts for ALL students to add 1
 inc=increment
 
