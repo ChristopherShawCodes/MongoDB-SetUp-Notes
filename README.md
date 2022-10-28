@@ -36,6 +36,17 @@ To See Contents Of A Collection:
 
 `db.collectionName.find()`
 
+To see contents of a collection , filtering by name
+
+`db.students.find({name:'Chris'})
+
+---------------------------------------
+
+
+To EDIT A Field NAME In A Table:
+
+`db.students.updateMany({},{$rename:{"number_of_belts":"belts_earned"}})`
+
 ---------------------------------------
 
 To Insert An Item In A Table:
@@ -44,19 +55,74 @@ To Insert An Item In A Table:
 
 ---------------------------------------
 
-To Delete An Item In A Table:
+Add a new field called 'number_of_belts' to ALL students with a starting value of 0
+
+`db.students.updateMany({},{$set:{number_of_belts:0}})`
+
+---------------------------------------
+
+Delete An Item In A Table:
 
 `db.users.deleteOne({name: 'Chris'})`
 
 ---------------------------------------
 
+Delete all students with a home_state of 'California'
+
+`db.students.deleteMany({home_state:'California'})`
+
+---------------------------------------
+
+Delete a student by name
+
+`db.students.deleteOne({name:'Mary'})`
+
+---------------------------------------
+
+
+Delete the FIRST student with a lucky_number that is GREATER THAN 5
+
+`db.students.deleteOne({lucky_number:{$gte:5}})`
+
+---------------------------------------
+
+Delete an item from an existing array
+
+`db.students.updateOne({name:'Britt'},{$pull:{interests: "Gardening"}})`
+
+---------------------------------------
+
+
+Delete a field from a table
+
+`db.students.updateMany({},{$unset:{lucky_number:1}},{multi:true})`
+
+---------------------------------------
+
+
+
 To Update An Item In A Table:
+
+updateOne = Update very first thing or the specified item
 
 `db.users.updateOne({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
 
-`db.users.updateMany({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
+updateMany = Update everything that matches the query
+
+example: Add interests: "coding", "brunch", "MongoDB" to all students
+
+`db.students.updateMany({},{$push:{interests:["coding","brunch","MongoDB"]}})`
+
+Add another interest into the existing interests array
+
+`db.students.updateOne({name:'Britt'},{$push:{interests: "Gardening"}})`
+
+Update the number_of_belts for ALL students to add 1
+
+`db.students.updateMany({},{$inc:{number_of_belts:1}})`
 
 ---------------------------------------
+
 
 *****Frequently Used Operators*****
 
