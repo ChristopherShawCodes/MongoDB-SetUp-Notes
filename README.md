@@ -52,7 +52,9 @@ To Delete An Item In A Table:
 
 To Update An Item In A Table:
 
-`db.users.update({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
+`db.users.updateOne({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
+
+`db.users.updateMany({name:'Chris'}, {$set:{favoriteFood: 'Italian'}})`
 
 ---------------------------------------
 
